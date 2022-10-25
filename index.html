@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
+    <style>
+        .mdui-appbar-with-searchbar {
+            padding-top: 64px;
+        }
+
+        .search-bar {
+            display: flex;
+            height: 45px;
+            background: #ffffff;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        .search-bar>input {
+            flex: 1 1;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            border: none;
+            background: none;
+            font-family: Roboto;
+            font-size: 14px;
+            line-height: 100%;
+            outline: none;
+            color: rgba(0, 0, 0, .87);
+        }
+
+        .search-bar>input::placeholder {
+            color: rgba(0, 0, 0, .54);
+        }
+
+        .search-bar>.mdui-icon {
+            margin: 0 16px;
+        }
+
+        .search-bar>.mdui-btn-icon {
+            margin: auto 11px;
+        }
+
+        /*暗色模式支持*/
+        .mdui-theme-layout-dark .search-bar {
+            background: #424242;
+        }
+
+        .mdui-theme-layout-dark .search-bar>input {
+            color: white;
+        }
+
+        .mdui-theme-layout-dark .search-bar>input::placeholder {
+            color: rgba(255, 255, 255, .70);
+        }
+
+
+
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            width: 6px;
+            background: rgba(#101F1C, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgba(144, 147, 153, .3);
+            background-clip: padding-box;
+            min-height: 28px;
+            transition: background-color .3s;
+            cursor: pointer;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(144, 147, 153, .5);
+        }
+
+        @media (max-width: 340px) {
+            .mdui-hidden-or {
+                display: none !important;
+            }
+        }
+
+        .dlc-em {
+            text-indent: 2em;
+        }
+    </style>
+    <title>课程共享计划 Linspace</title>
+</head>
+
+
+<body class="mdui-theme-primary-blue mdui-theme-layout-auto">
+
+
+    <div id="home" class="">
+        <div class="mdui-appbar mdui-appbar-fixed mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon">
+                    <i class="mdui-icon material-icons">settings</i>
+                </a>
+                <div class="mdui-toolbar-spacer"></div>
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon">
+                    <i class="mdui-icon material-icons">cloud_queue</i>
+                </a>
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon">
+                    <i class="mdui-icon material-icons">apps</i>
+                </a>
+            </div>
+        </div>
+
+        <div class="mdui-container">
+            <div class="mdui-valign" style="height: 100vh;">
+                <div class="mdui-container" style="margin-bottom:10vh;">
+                    <div class="mdui-typo-display-1 mdui-text-center"><strong>临界学术</strong></div>
+                    <div class="mdui-typo mdui-m-y-1 mdui-center" style="width: 200px;">
+                        <hr style="height:0px" />
+                    </div>
+                    <div class="mdui-typo-headline-opacity mdui-text-center mdui-p-b-5">Linspace</div>
+                    <div class="search-bar mdui-shadow-2 mdui-m-t-2 mdui-m-b-2"
+                        style="margin: 0 auto;max-width: 600px;">
+                        <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
+                            style="margin-left:5px;margin-right:5px;">
+                            <i class="mdui-icon material-icons">book</i>
+                        </button>
+                        <input id="sein" onclick="Check()" placeholder=""
+                            onkeydown="if(event.keyCode==13) {Search()}" />
+                        <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
+                            style="margin-left:5px;margin-right:5px;" onclick="Search();"
+                            mdui-tooltip="{content: '模糊搜索'}">
+                            <i class="mdui-icon material-icons">search</i>
+                        </button>
+                    </div>
+                    <div class="mdui-m-b-3" style="margin: 0 auto;max-width: 600px;">
+                        <button class="mdui-btn mdui-ripple mdui-text-color-theme mdui-float-right">知识共享</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="phone" class="mdui-hidden" style="height:100vh">
+        <div class="search-bar" style="border-radius: 0px;border-top:none;border-left:none;border-right:none;">
+            <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
+                style="margin-left:5px;margin-right:5px;">
+                <i class="mdui-icon material-icons">book</i>
+            </button>
+            <input id="copy" placeholder="" oninput="Anc()" onkeydown="if(event.keyCode==13) {Search();}" />
+            <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
+                style="margin-left:5px;margin-right:5px;" onclick="Search();">
+                <i class="mdui-icon material-icons">search</i>
+            </button>
+        </div>
+        <div class="" onclick="Change()" style="height:calc(100vh - 46px)">
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
+    <script>
+        var $ = mdui.$;
+
+        function Get(id) {
+            obj = document.getElementById(id)
+            return obj
+        }
+
+        function Search() {
+        }
+
+        function Anc() {
+            Get('sein').value = Get('copy').value
+        }
+
+        function Change() {
+            $('#home').toggleClass('mdui-hidden')
+            $('#phone').toggleClass('mdui-hidden')
+            Get('copy').focus()
+        }
+
+        function Check() {
+            if (IsPhone()) Change();
+        }
+
+        function IsPhone() {
+            var info = navigator.userAgent;
+            var isPhone = /mobile/i.test(info);
+            return isPhone;
+        }
+
+    </script>
+</body>
+
+</html>
