@@ -1,1 +1,0 @@
-# mhs.course.sharing
