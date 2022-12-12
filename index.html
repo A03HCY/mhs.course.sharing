@@ -109,7 +109,7 @@
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-white">
                     <i class="mdui-icon material-icons">apps</i>
                 </a>
-                <a href="javascript:;" class="mdui-typo-title mdui-hidden-xs mdui-text-color-white">Linspace</a>
+                <a href="javascript:;" class="mdui-typo-title mdui-hidden-xs mdui-text-color-white">Linspace 临界学术</a>
                 <div class="mdui-toolbar-spacer"></div>
                 <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-white">
                     <i class="mdui-icon material-icons">cloud_queue</i>
@@ -120,29 +120,21 @@
             </div>
         </div>
 
-        <div class="mdui-container">
-            <div class="mdui-valign" style="height: 100vh;">
-                <div class="mdui-container" style="margin-bottom:10vh;">
-                    <div class="mdui-typo-display-2 mdui-text-center mdui-text-color-white"><strong>临界学术</strong></div>
-                    <div class="mdui-typo mdui-m-y-1 mdui-center" style="width: 200px;">
-                        <hr style="height:0px" />
-                    </div>
-                    <div class="mdui-typo-headline-opacity mdui-text-center mdui-text-color-white mdui-p-b-5">课程共享计划</div>
-                    <div class="search-bar mdui-shadow-5 mdui-m-t-2 mdui-m-b-5"
-                        style="margin: 0 auto;max-width: 700px;">
-                        <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
-                            style="margin-left:5px;margin-right:5px;">
-                            <i class="mdui-icon material-icons">book</i>
-                        </button>
-                        <input id="sein" onclick="Check()" placeholder=""
-                            onkeydown="if(event.keyCode==13) {Search()}" />
-                        <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
-                            style="margin-left:5px;margin-right:5px;" onclick="Search();"
-                            mdui-tooltip="{content: '模糊搜索'}">
-                            <i class="mdui-icon material-icons">search</i>
-                        </button>
-                    </div>
+        <div style="min-width:320px;margin-top:calc(35vh);">
+            <div class="mdui-container">
+
+                <div class="search-bar" style="margin: 0 auto;max-width: 650px;">
+                    <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
+                        style="margin-left:5px;margin-right:5px;" onclick="Search();">
+                        <i class="mdui-icon material-icons">book</i>
+                    </button>
+                    <input id="search" type="search" placeholder="" onkeydown="if(event.keyCode==13) {Search()}">
+                    <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
+                        style="margin-left:5px;margin-right:5px;">
+                        <i class="mdui-icon material-icons">search</i>
+                    </button>
                 </div>
+
             </div>
         </div>
     </div>
