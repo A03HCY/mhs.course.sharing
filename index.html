@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
     <style>
         body {
-            background: url(/resource/img/background.jpg) no-repeat center center fixed;
+            background: url() no-repeat center center fixed;
             -webkit-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
@@ -37,7 +37,7 @@
             border: none;
             background: none;
             font-family: Roboto;
-            font-size: 14px;
+            font-size: 16px;
             line-height: 100%;
             outline: none;
             color: rgba(0, 0, 0, .87);
@@ -100,38 +100,41 @@
 </head>
 
 
-<body class="mdui-theme-primary-blue mdui-theme-layout-auto">
+<body class="mdui-theme-primary-blue mdui-theme-accent-blue" style="background-color: rgb(230, 230, 230);">
 
+    <div id="head" class="mdui-p-b-4" style="background-color:black;position:relative;">
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-container">
+                <div class="mdui-toolbar">
 
-    <div id="home" class="">
-        <div class="mdui-appbar mdui-appbar-fixed mdui-shadow-0">
-            <div class="mdui-toolbar">
-                <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-white">
-                    <i class="mdui-icon material-icons">apps</i>
-                </a>
-                <a href="javascript:;" class="mdui-typo-title mdui-hidden-xs mdui-text-color-white">Linspace 临界学术</a>
-                <div class="mdui-toolbar-spacer"></div>
-                <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-white">
-                    <i class="mdui-icon material-icons">cloud_queue</i>
-                </a>
-                <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-white">
-                    <i class="mdui-icon material-icons">settings</i>
-                </a>
+                    <div class="mdui-toolbar-spacer"></div>
+                    <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-white">
+                        <i class="mdui-icon material-icons">cloud_queue</i>
+                    </a>
+                    <a href="javascript:;" class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-white">
+                        <i class="mdui-icon material-icons">settings</i>
+                    </a>
+                </div>
             </div>
         </div>
-
-        <div style="min-width:320px;margin-top:calc(35vh);">
+        <div class="mdui-p-y-5 mdui-m-t-2">
             <div class="mdui-container">
 
-                <div class="search-bar" style="margin: 0 auto;max-width: 650px;">
+                <div class="mdui-typo-headline mdui-text-color-white" style="margin-left:3px;">Linspace<strong
+                        class="mdui-m-l-1" style="letter-spacing:2px;">临界学术</strong></div>
+                <div class="mdui-m-y-2 mdui-typo-display-2 mdui-text-color-white" style="letter-spacing:4px;">
+                    <strong>知识共享计划</strong>
+                </div>
+
+                <div class="search-bar mdui-float-left" style="width:650px;">
                     <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
                         style="margin-left:5px;margin-right:5px;" onclick="Search();">
                         <i class="mdui-icon material-icons">book</i>
                     </button>
                     <input id="search" type="search" placeholder="" onkeydown="if(event.keyCode==13) {Search()}">
-                    <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
-                        style="margin-left:5px;margin-right:5px;">
-                        <i class="mdui-icon material-icons">search</i>
+                    <button class="mdui-btn mdui-color-blue mdui-text-color-white mdui-ripple bar-lighted"
+                        style="height:100%;border-top-left-radius:0px;border-bottom-left-radius:0px;">
+                        <i class="mdui-icon material-icons">search</i><strong>搜索</strong>
                     </button>
                 </div>
 
@@ -139,56 +142,32 @@
         </div>
     </div>
 
-
-    <div id="phone" class="mdui-hidden" style="height:100vh">
-        <div class="search-bar" style="border-radius: 0px;border-top:none;border-left:none;border-right:none;">
-            <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
-                style="margin-left:5px;margin-right:5px;">
-                <i class="mdui-icon material-icons">book</i>
-            </button>
-            <input id="copy" placeholder="" oninput="Anc()" onkeydown="if(event.keyCode==13) {Search();}" />
-            <button class="mdui-btn mdui-btn-icon mdui-ripple mdui-text-color-theme-icon"
-                style="margin-left:5px;margin-right:5px;" onclick="Search();">
-                <i class="mdui-icon material-icons">search</i>
-            </button>
-        </div>
-        <div class="" onclick="Change()" style="height:calc(100vh - 51px)">
-
+    <div class="mdui-container mdui-m-t-2">
+        <div class="mdui-row">
+            <div class="mdui-col-xs-9">
+                <div class="mdui-card mdui-shadow-0 mdui-p-x-2">
+                    <div class="mdui-tab mdui-m-t-2" mdui-tab style="border-bottom: 1px rgb(230, 230, 230) solid;">
+                        <a href="#a" class="mdui-ripple"><strong>动态</strong></a>
+                        <a href="#s" class="mdui-ripple"><strong>为你推荐</strong></a>
+                        <a href="#d" class="mdui-ripple"><strong>虚空终端</strong></a>
+                        <a href="#f" class="mdui-ripple"><strong>快速检索</strong></a>
+                    </div>
+                    asasa
+                </div>
+            </div>
+            <div class="mdui-col-xs-3">
+                <div class="mdui-card mdui-shadow-0">
+                    <div class="mdui-btn mdui-center mdui-color-blue mdui-text-color-white mdui-ripple">
+                        <strong>上传知识</strong>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+
     <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
     <script>
-        var $ = mdui.$;
-
-        function Get(id) {
-            obj = document.getElementById(id)
-            return obj
-        }
-
-        function Search() {
-        }
-
-        function Anc() {
-            Get('sein').value = Get('copy').value
-        }
-
-        function Change() {
-            $('#home').toggleClass('mdui-hidden')
-            $('#phone').toggleClass('mdui-hidden')
-            Get('copy').focus()
-        }
-
-        function Check() {
-            if (IsPhone()) Change();
-        }
-
-        function IsPhone() {
-            var info = navigator.userAgent;
-            var isPhone = /mobile/i.test(info);
-            return isPhone;
-        }
-
     </script>
 </body>
 
